@@ -10,6 +10,9 @@ app.use("/products", productsRouter);
 app.use("/categories", categoriesRouter);
 app.use("/suppliers", suppliersRouter);
 
+app.get("/", (req, res, next) => {
+  res.status(200).json({ data: "hello world" });
+})
 // Not found handler
 app.use((req, res, next) => {
   next({ status: 404, message: `Not found: ${req.originalUrl}` });
