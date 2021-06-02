@@ -10,7 +10,7 @@ app.use("/products", productsRouter);
 app.use("/categories", categoriesRouter);
 app.use("/suppliers", suppliersRouter);
 
-app.get("/", (req, res, next) => {
+app.get("/src", (req, res, next) => {
   res.status(200).json({ data: "hello world" });
 })
 // Not found handler
